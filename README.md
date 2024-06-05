@@ -1,6 +1,6 @@
 ## Clone this repository
 ```
-  git clone https://github.com/shivm04/hostel-management-project-PHP.git
+  git clone https://github.com/shivm04/library-management-project-php.git
 ```
 
 ## Required Packages 
@@ -14,23 +14,22 @@ Apache2
 ## Create a databases 
 ```
   DB name :- hostel
-  CREATE DATABASE hostel;
+  CREATE DATABASE library;
 
   Import the hostel.sql file into the hostel database
-  mysql -u root -p hostel < hostel.sql
+  mysql -u root -p library < library.sql
 
 ```
 
 ## Chnage the permission of the files 
 ```
-chmod -R 755 hostel-management-project-PHP/ hostel-management-project-PHP/*
-chown -R www-data:root hostel-management-project-PHP/* hostel-management-project-PHP/
+chmod -R 755 library-management-project-php/ library-management-project-php/*
+chown -R www-data:root library-management-project-php/* library-management-project-php/
 ```
 
 ## Change the database Credentials in the configuration file 
 ```
-   hostel-management-project-PHP/hostel/includes
-   hostel-management-project-PHP/hostel/admin/includes
+   library-management-project-php/library/includes
 ```
 
 ## Create a config file for the apache to host our website 
@@ -38,11 +37,11 @@ chown -R www-data:root hostel-management-project-PHP/* hostel-management-project
 ```
 <VirtualHost *:80>
     ServerAdmin webmaster@your_domain.com
-    ServerName test.shivm07.shop
-    ServerAlias test.shivm07.shop
+    ServerName test1.shivm07.shop
+    ServerAlias test1.shivm07.shop
 
-    DocumentRoot /var/www/html/hostel-management-project-PHP/hostel
-    <Directory /var/www/html/hostel-management-project-PHP/hostel>
+    DocumentRoot /var/www/html/library-management-project-php/library
+    <Directory /var/www/html/library-management-project-php/library>
         Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted
