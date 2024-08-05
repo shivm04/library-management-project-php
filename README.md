@@ -23,8 +23,8 @@ Apache2
 
 ## Chnage the permission of the files 
 ```
-chmod -R 755 library-management-project-php/ library-management-project-php/*
-chown -R www-data:root library-management-project-php/* library-management-project-php/
+sudo chmod -R 755 library-management-project-php/ library-management-project-php/*
+sudo chown -R www-data:root library-management-project-php/* library-management-project-php/
 ```
 
 ## Change the database Credentials in the configuration file 
