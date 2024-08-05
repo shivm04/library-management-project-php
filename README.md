@@ -30,6 +30,7 @@ sudo chown -R www-data:root library-management-project-php/* library-management-
 ## Change the database Credentials in the configuration file 
 ```
    library-management-project-php/library/includes
+   library-management-project-php/library/admin/includes
 ```
 
 ## Create a config file for the apache to host our website 
