@@ -13,7 +13,7 @@ Apache2
 
 ## Create a databases 
 ```
-  DB name :- hostel
+  DB name :- library
   CREATE DATABASE library;
 
   Import the hostel.sql file into the hostel database
