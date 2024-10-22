@@ -25,4 +25,5 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@3.110.48.193 "
           cd /var/www/html/library-management-project-php &&
+          git checkout main &&
           git pull origin main"
