@@ -1,4 +1,4 @@
-name: Deploy Code via Pull
+name: Deploy Code via Pull on Development
 
 on:
   push:
