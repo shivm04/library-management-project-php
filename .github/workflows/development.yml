@@ -24,6 +24,6 @@ jobs:
     - name: Pull latest code from GitHub on the server
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@3.110.48.193 "
-          cd /var/www/html/library-management-project-php &&
+          cd /var/www/library-management-project-php &&
           git checkout development &&
           git pull origin development"
