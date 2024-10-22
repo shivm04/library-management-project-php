@@ -7,6 +7,11 @@ name: Deploy Code via Pull on Main Branch
 
 on:
   workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'  # Description for the input
+        default: 'main'           # Default branch
+        required: true                   # Make the input required
 
 jobs:
   deploy:
