@@ -1,9 +1,12 @@
 name: Deploy Code via Pull on Development
 
+#on:
+#  push:
+#    branches:
+#      - development  # Specify the branch to trigger the action (e.g., 'main')
+
 on:
-  push:
-    branches:
-      - development  # Specify the branch to trigger the action (e.g., 'main')
+  workflow_dispatch:
 
 jobs:
   deploy:
