@@ -1,0 +1,28 @@
+name: Deploy Code via Pull
+
+on:
+  push:
+    branches:
+      - main  # Specify the branch to trigger the action (e.g., 'main')
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Install SSH client
+      run: sudo apt-get update && sudo apt-get install -y ssh
+
+    - name: Add SSH private key
+      uses: webfactory/ssh-agent@v0.5.4
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Pull latest code from GitHub on the server
+      run: |
+        ssh -o StrictHostKeyChecking=no ubuntu@3.110.48.193 "
+          cd /var/www/html/library-management-project-php &&
+          git pull origin main"
